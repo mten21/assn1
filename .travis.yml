@@ -1,8 +1,5 @@
 sudo: false
 language: java
 
-os:
-  - linux
-
 script:
   - 
