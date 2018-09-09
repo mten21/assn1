@@ -18,21 +18,21 @@ Fill in the template classes from the provided repository.
 
 1. Design a `Player` class that represents hockey players. Players have some properties you must add:
 
-- positions on a hockey team. There are at least four: defender, winger, centre, goaltender.
+- `Position` on a hockey team. There are at least four: defender, winger, centre, goaltender.
 - points (a point in hockey is a goal or an assist) and names. 
 - names.
 
-In addition, add methods to create a Player, and add a `getPoints` and `getName` method`
+In addition, add methods to create a Player, and add a `getPoints` and `getName` method`.
 
-2. Implement the class called Team that will use the `Player` type to maintain a list of players. Use a ![generic/parameterized](https://docs.oracle.com/javase/tutorial/java/generics/types.html) type `List` to hold the players. Teams should store the number of players, and have a name (e.g. Canucks, Penguins ...) 
+2. Implement the class called Team that will use the `Player` type to maintain a list of players. Use a [generic/parameterized type](https://docs.oracle.com/javase/tutorial/java/generics/types.html) type `List` to hold the players. Teams should store the number of players, and have a name (e.g. Canucks, Penguins ...) 
 
 # Part 2
 Using JetUML, create a UML Object diagram to represent a `League` instance. Leagues have multiple Teams. For this diagram, assume your league object has 3 teams and each team has 4 players. **Only show the player objects for one team.** Submit your diagram by committing it to your assignment1 repo, in the JetUML "*.mdl" format and a PDF.  
 
 # Part 3 
-1. Implement the Comparable interface for the Team class using total Player points. 
-1. Implement a Comparator method for ranking hockey players based on points. Do this with a lambda expression.
-1. Override the toString method in order to print the following for a Team:
+1. Implement the `Comparable` interface for the Team class using total Player points. 
+1. Implement a `Comparator` method for ranking hockey players based on points. Do this with a lambda expression.
+1. Override the `Object.toString()` method in order to print the following for a Team:
 
 `System.out.println(canucks)
 : Canucks have four points.`
