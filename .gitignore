@@ -25,3 +25,6 @@ hs_err_pid*
 /gradlew
 /gradlew.bat
 /build/
+InstructorTest.java
+bin
+logs
