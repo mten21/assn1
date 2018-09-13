@@ -33,7 +33,7 @@ dependencies {
         'junit:junit:4.11'
     )
     testRuntime(
-            'junit:junit:4.11'
+        'junit:junit:4.11'
     )
 }
 

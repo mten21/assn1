@@ -1,6 +1,6 @@
-Assignment 1
+# Assignment 1
 
-Due: Sep 21, 2018 at midnight in Github.
+Due: Sep 26, 2018 at midnight in Github.
 
 # Overview
 For this, and the remaining assignments: 
@@ -15,6 +15,12 @@ This assignment uses Gradle, a build tool. Gradle makes it easy to automate comp
 
 To run your code from the command line, type `gradle build`. `gradle test` will execute the tests I've added to the code here. NB: **the full test suite is on Travis, and you should commit/push to Github to see these results**.
 To run from Eclipse, use the [Gradle tasks view](http://www.vogella.com/tutorials/EclipseGradle/article.html#using-the-gradle-tasks-view) (likely bottom right).
+
+There is no "functionality" here that is useful to a user; the test suite is the main/only way to see results. You can consider writing some print statements in Driver.main().
+
+# Tips
+- Test-driven development writes test cases first, then makes the code pass those tests. First get your code to compile (syntax); then get the tests to pass (semantics).
+- M1 and M2 notes will be important for this exercise.
 
 # Part 1. /10 marks
 
@@ -34,8 +40,10 @@ In addition, add methods to create a Player, and add a `getPoints` and `getName`
 Using JetUML, create a UML Object diagram to represent a `League` instance. Leagues have multiple Teams. For this diagram, assume your league object has 3 teams and each team has 4 players. **Only show the player objects for one team.** Submit your diagram by committing it to your assignment1 repo, in the JetUML "*.mdl" format and a PDF.  
 
 # Part 3  /10 marks
-1. Implement the `Comparable` interface for the Team class using total Player points. 
-1. Implement a `Comparator` method for ranking hockey players based on points. Do this with a lambda expression.
+1. Implement a League object holding the teams, per the object diagram. Leagues should define a `sort` method that sorts teams by total points. 
+1. Implement the `Comparable` interface for the Team class using total Player points. The Team with more player points should be ranked higher. Use this to sort teams in the League.
+1. Implement a `PlayerComparator` class for ranking hockey players based on points. 
+    1. Use this comparator to sort the players in a Team according to points.  
 1. Override the `Object.toString()` method in order to print the following for a Team:
 
 `System.out.println(canucks)

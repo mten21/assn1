@@ -5,8 +5,5 @@ package ca.uvic.seng330.assn1;
  *
  */
 public class Player {
-
-	private int points;
-	private String name;
 	
 }
