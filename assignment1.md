@@ -21,6 +21,7 @@ There is no "functionality" here that is useful to a user; the test suite is the
 # Tips
 - Test-driven development writes test cases first, then makes the code pass those tests. First get your code to compile (syntax); then get the tests to pass (semantics).
 - M1 and M2 notes will be important for this exercise.
+- Don't change the tests we provide; you may wish to comment some out in order to do incremental work. 
 
 # Part 1. /10 marks
 
