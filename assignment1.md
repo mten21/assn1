@@ -2,6 +2,15 @@
 
 Due: Sep 26, 2018 at midnight in Github.
 
+# Changelog
+
+## 9/14
+ - JetUML format is .jet, not .mdl
+ - JetUML exports images, not PDF
+ - clarified instructor test timeline
+ - added mark breakdown for code in new section "Marks"
+ - added Changelog :)
+
 # Overview
 For this, and the remaining assignments: 
 - not running (and fixing) Checkstyle warnings will result in lost marks (ass 2-4 only).
@@ -23,13 +32,18 @@ There is no "functionality" here that is useful to a user; the test suite is the
 - M1 and M2 notes will be important for this exercise.
 - Don't change the tests we provide; you may wish to comment some out in order to do incremental work. 
 
+# Marking
+- Marks are allocated for passing all tests (60%) and style/design (40%)
+- We run tests on your code, but do not reveal all our tests. You should use Travis to ensure you pass our tests. 
+- We may add tests until 2 days before the deadline. If you pass tests after that point, you can be confident you have achieved full test marks.
+
 # Part 1. /10 marks
 
-Use the template classes from this repository. 
+Use the template classes from the bootstrap repo. 
 
 1. Design a `Player` class that represents hockey players. Players have some properties you must add:
 
-- `Position` on a hockey team. There are at least four: `Defender, Winger, Centre, Goalie`.
+- `Position` on a hockey team. There are at least four: `Defender, Winger, Centre, Goaltender`.
 - `points` (a point in hockey is a goal or an assist). 
 - `name`.
 
@@ -38,7 +52,7 @@ In addition, add methods to create a Player, and add a `getPoints` and `getName`
 2. Implement the class called Team that will use the `Player` type to maintain a list of players. Use a [generic/parameterized type](https://docs.oracle.com/javase/tutorial/java/generics/types.html) type `List` to hold the players. Teams should store the number of players, and have a name (e.g. Canucks, Penguins ...) 
 
 # Part 2 /10 marks
-Using JetUML, create a UML Object diagram to represent a `League` instance. Leagues have multiple Teams. For this diagram, assume your league object has 3 teams and each team has 4 players. **Only show the player objects for one team.** Submit your diagram by committing it to your assignment1 repo, in the JetUML "*.mdl" format and a PDF.  
+Using JetUML, create a UML Object diagram to represent a `League` instance. Leagues have multiple Teams. For this diagram, assume your league object has 3 teams and each team has 4 players. **Only show the player objects for one team.** Submit your diagram by committing it to your assignment1 repo, in the JetUML "*.jet" format and a PNG.  
 
 # Part 3  /10 marks
 1. Implement a League object holding the teams, per the object diagram. Leagues should define a `sort` method that sorts teams by total points. 
