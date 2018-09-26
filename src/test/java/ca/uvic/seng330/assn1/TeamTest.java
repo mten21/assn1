@@ -1,4 +1,4 @@
-package ca.uvic.seng330.assn1;
+package test.java.ca.uvic.seng330.assn1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,6 +7,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.junit.Test;
+
+import main.java.ca.uvic.seng330.assn1.League;
+import main.java.ca.uvic.seng330.assn1.Player;
+import main.java.ca.uvic.seng330.assn1.Team;
 
 /**
  * Team testing. Part 1.
@@ -20,7 +24,7 @@ public class TeamTest {
    */
   @Test
   public void testPlayerExists() {
-    Player p = new Player("José", 100, Position.GOALTENDER);
+    Player p = new Player("José", 100, Player.Position.GOALTENDER);
     assertNotNull(p);
   }
 
@@ -29,7 +33,7 @@ public class TeamTest {
    */
   @Test
   public void testPlayerName()   {
-    Player player = new Player("José", 100, Position.GOALTENDER);
+    Player player = new Player("José", 100, Player.Position.GOALTENDER);
 
     // Check the name.
     String name = player.getName();
@@ -41,7 +45,7 @@ public class TeamTest {
    */
   @Test
   public void testPlayerPoints() {
-    Player player = new Player("José", 100, Position.GOALTENDER);
+    Player player = new Player("José", 100, Player.Position.GOALTENDER);
 
     // Check the points.
     assertNotNull("The method returns NULL!", player.getPoints());
@@ -64,6 +68,7 @@ public class TeamTest {
 	  League l = new League("NHL");
 	  Team team = new Team("Canucks");
 	  l.addTeam(team);
+	  System.out.println(l.iterator().next().getPoints());
 	  assertEquals(l.iterator().next().getPoints(), 0);
   }
   
@@ -77,8 +82,8 @@ public class TeamTest {
 	  l.addTeam(team);
 	  Team team2 = new Team("Penguins");
 	  l.addTeam(team2);
-	  team.addPlayer(new Player("Bure",44,Position.WINGER));
-	  team2.addPlayer(new Player("Crosby GOAT", 87, Position.CENTRE));
+	  team.addPlayer(new Player("Bure",44,Player.Position.WINGER));
+	  team2.addPlayer(new Player("Crosby GOAT", 87, Player.Position.CENTRE));
 	  List<Team> sortedTeams = l.sort();
 	  assertEquals(sortedTeams.get(0).getPoints(), 44);
   }

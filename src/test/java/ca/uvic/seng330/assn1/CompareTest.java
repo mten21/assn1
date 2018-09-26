@@ -2,7 +2,7 @@
  * Test driver. Add more tests here as needed.
  */
 
-package ca.uvic.seng330.assn1;
+package test.java.ca.uvic.seng330.assn1;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -10,6 +10,10 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import org.junit.Test;
+
+import main.java.ca.uvic.seng330.assn1.Player;
+import main.java.ca.uvic.seng330.assn1.Team;
+
 import org.junit.Before;
 
 /**
@@ -31,13 +35,13 @@ public class CompareTest {
 		team1 = new Team("Java");
 
 		// Add players.
-		p1 = new Player("José", 100, Position.GOALTENDER);
-		p2 = new Player("Pedrito", 101, Position.DEFENDER);
+		p1 = new Player("José", 100, Player.Position.GOALTENDER);
+		p2 = new Player("Pedrito", 101, Player.Position.DEFENDER);
 		team.addPlayer(p1);
 		team.addPlayer(p2);
-		team.addPlayer(new Player("Juanito", 102, Position.DEFENDER));
-		team.addPlayer(new Player("Pepe", 103, Position.CENTRE));
-		team.addPlayer(new Player("Ricardo", 104, Position.WINGER));
+		team.addPlayer(new Player("Juanito", 102, Player.Position.DEFENDER));
+		team.addPlayer(new Player("Pepe", 103, Player.Position.CENTRE));
+		team.addPlayer(new Player("Ricardo", 104, Player.Position.WINGER));
 	}
 
 	/**
@@ -47,6 +51,7 @@ public class CompareTest {
 	public void validatesOutputOfToString() {
 
 		String s = team.toString();
+		System.out.println(s);
 		assertTrue("Success",s.equals("Los Tequileros Mexicanos have 510 points"));
 	}
 
@@ -66,8 +71,8 @@ public class CompareTest {
 	@Test 
 	public void testsComparableWhenGreater() {
 
-		Player p3 = new Player("John",93, Position.WINGER);
-		Player p4 = new Player("Josiah",94, Position.DEFENDER);
+		Player p3 = new Player("John",93, Player.Position.WINGER);
+		Player p4 = new Player("Josiah",94, Player.Position.DEFENDER);
 		team1.addPlayer(p3); //100 + 93
 		team2.addPlayer(p4); //101+94
 		int result = team2.compareTo(team1);
@@ -80,9 +85,9 @@ public class CompareTest {
 	@Test
 	public void testPlayerComparator() {
 		Team compare = new Team("compare");
-		Player c1 = new Player("Pedro", 50, Position.DEFENDER);
-		Player c3 = new Player("Dilip", 15, Position.CENTRE);		
-		Player c2 = new Player("Priya", 100, Position.GOALTENDER);
+		Player c1 = new Player("Pedro", 50, Player.Position.DEFENDER);
+		Player c3 = new Player("Dilip", 15, Player.Position.CENTRE);		
+		Player c2 = new Player("Priya", 100, Player.Position.GOALTENDER);
 		compare.addPlayer(c1);
 		compare.addPlayer(c2);
 		compare.addPlayer(c3);

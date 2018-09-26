@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.ca.uvic.seng330.assn1.TeamTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-09-26T22:28:44" hostname="Kabloona" time="0.007">
+  <properties/>
+  <testcase name="testLeagueSorts" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.002"/>
+  <testcase name="testPlayerExists" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.0"/>
+  <testcase name="testPlayerPoints" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.0"/>
+  <testcase name="testLeagueExists" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.0"/>
+  <testcase name="testPlayerName" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.0"/>
+  <testcase name="testLeagueHoldsTeams" classname="test.java.ca.uvic.seng330.assn1.TeamTest" time="0.001"/>
+  <system-out><![CDATA[0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
