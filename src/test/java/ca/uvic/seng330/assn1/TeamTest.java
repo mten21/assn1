@@ -68,7 +68,6 @@ public class TeamTest {
 	  League l = new League("NHL");
 	  Team team = new Team("Canucks");
 	  l.addTeam(team);
-	  System.out.println(l.iterator().next().getPoints());
 	  assertEquals(l.iterator().next().getPoints(), 0);
   }
   

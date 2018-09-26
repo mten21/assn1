@@ -51,7 +51,6 @@ public class CompareTest {
 	public void validatesOutputOfToString() {
 
 		String s = team.toString();
-		System.out.println(s);
 		assertTrue("Success",s.equals("Los Tequileros Mexicanos have 510 points"));
 	}
 
